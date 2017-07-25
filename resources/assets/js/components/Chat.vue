@@ -13,9 +13,9 @@
            <div class="columns">
              <div class="column">
                <div class="field">
-                 <p class="control">
+
                    <textarea class="textarea" id="msg" placeholder="Normal textarea"></textarea>
-                 </p>
+
                </div>
                </div>
                <div class="column">
@@ -49,7 +49,7 @@
           this.conversation.messages.push({
             'msg' : msg
           });
-
+          console.log(msg);
           this.$http.post('/send' , {msg : msg , conversation_id : this.conversation.id }).then(data => {
           $('#msg').val('');
 
